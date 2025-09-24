@@ -72,7 +72,7 @@ Customze parameters are for experts only and change only when you know what you 
 | Mandatory| zone | Zone to deploy | africa-south1-a |
 | Mandatory| vmtype | [vm type,e2-medium etc or custom-numOfCpu-memInMeg-ext](https://cloud.google.com/compute/docs/machine-types)  | e2-medium |
 | Mandatory| linuxType | The VM's Linux image family from the ubuntu-os-cloud project | ubuntu-2204-lts |
-| Mandatory| diskSizeGb | root disk size in GB | 60 |
+| Mandatory| diskSizeGb | root disk size in GB | 30 |
 | Mandatory| BTCPAY_HOST  | host name of the btcpay server | username.btchubafrica.com|
 | Mandatory| NBITCOIN_NETWORK | [network type](https://github.com/btcpayserver/btcpayserver-docker/tree/master/Production) | mainnet |
 | Mandatory| BTCPAYGEN_CRYPTO1 | crypto currecy | btc |
@@ -81,7 +81,7 @@ Customze parameters are for experts only and change only when you know what you 
 | Optional| LIGHTNING_ALIAS | lightning node's alias | |
 | Optional| BTCPAYGEN_CRYPTO2 | other crypto currency, ltc ,btg | |
 | Optional| CUSTOM_SSH_KEY | ssh public key   |  |  |
-| Customize | BTCPAYGEN_ADDITIONAL_FRAGMENTS | [bitcoind prune config](https://github.com/btcpayserver/btcpayserver-docker/blob/master/README.md#generated-docker-compose-) | opt-save-storage-xs |
+| Customize | BTCPAYGEN_ADDITIONAL_FRAGMENTS | [bitcoind prune config](https://github.com/btcpayserver/btcpayserver-docker/blob/master/README.md#generated-docker-compose-) | opt-save-storage-xxs |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | woocommerce | opt-add-woocommerce |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | Nostr relay | opt-add-nostr-relay |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | shopify | opt-add-shopify |
