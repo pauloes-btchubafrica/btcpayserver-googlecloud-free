@@ -1,18 +1,10 @@
 # btcpayserver-googlecloud-free [NOT COMPLETE]
 Host your BTC Pay Server on Google Cloud for free.
 
-Instructions to deploy BTCPay Server in [production environment](https://github.com/btcpayserver/btcpayserver-docker/tree/master/Production) hosted in Google Cloud.
+# Instructions to deploy BTCPay Server in hosted in Google Cloud.
 
-The following instructions assume you have [Google Cloud](https://console.cloud.google.com) subscription.
-
-[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/btchubafrica/btcpayserver-google-cloud&page=editor)
-
-
-
-Deployment vide overview by btcpayserver:  
-[![BTCPay - Google cloud shell Setup](https://i.ytimg.com/vi/ltKUzFaer2g/hqdefault.jpg)](https://youtu.be/ltKUzFaer2g "BTCPay - Google cloud shell Setup")
-
-You can find more details about the tooling install in the Virtual Machine in [the tooling section of BTCPayServer-Docker repository](https://github.com/btcpayserver/btcpayserver-docker/blob/master/README.md#tooling).
+1. Setup a new account in [Google Cloud](https://console.cloud.google.com). This should be done with a new gmail account, one not associated with any currenct Google Cloud subscription. 2. Create and manager your first [cloud project]([url](https://cloud.google.com/resource-manager/docs/creating-managing-projects)).
+3. [![Login with new account](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/btchubafrica/btcpayserver-google-cloud&page=editor)
 
 ## Overview
 To install BTCPay server with this google cloud deployment template for free 
@@ -24,7 +16,7 @@ To install BTCPay server with this google cloud deployment template for free
 6. ssh into the vm instance and run changedomain.sh to setup free ssl certificate
 7. test to access https://username.btchubafrica.com and sign up (1st registered user becomes the admin user)
 
-## Setup gcloud tool
+## Setup gcloud environment
 In case that you run the deploy script from local computer, you need to install gcloud sdk tool. https://cloud.google.com/sdk/docs/
 If you prefer the Google cloud shell, you dont need to install anything and what is better? You dont need update the sdk. It's already in the cloud .Just click the link above in this document. This document is written for google cloud shell, but it should be very similar to local gcloud sdk.
 
@@ -49,7 +41,7 @@ The default config is,
 
 * region is africa-south1
 * zone is africa-south1-a
-* 2 vCPU with 4GiB Memory 
+* 1 vCPU with 2GiB Memory 
 * boot disksize : 30GB
 * bitcoin mainnet
 * use lnd
@@ -74,19 +66,17 @@ Customze parameters are for experts only and change only when you know what you 
 | Mandatory| linuxType | The VM's Linux image family from the ubuntu-os-cloud project | ubuntu-2204-lts |
 | Mandatory| diskSizeGb | root disk size in GB | 30 |
 | Mandatory| BTCPAY_HOST  | host name of the btcpay server | username.btchubafrica.com|
-| Mandatory| NBITCOIN_NETWORK | [network type](https://github.com/btcpayserver/btcpayserver-docker/tree/master/Production) | mainnet |
+| Mandatory| NBITCOIN_NETWORK | [network type](https://github.com/pauloes-btchubafrica/btcpayserver-docker/tree/master/Production) | mainnet |
 | Mandatory| BTCPAYGEN_CRYPTO1 | crypto currecy | btc |
 | Mandatory| BTCPAYGEN_LIGHTNING | lightning implementation type (lnd or c-lightning) | lnd |
 | Optional| LETSENCRYPT_EMAIL | email notified by  let's encrypt free SSL | |
 | Optional| LIGHTNING_ALIAS | lightning node's alias | |
 | Optional| BTCPAYGEN_CRYPTO2 | other crypto currency, ltc ,btg | |
 | Optional| CUSTOM_SSH_KEY | ssh public key   |  |  |
-| Customize | BTCPAYGEN_ADDITIONAL_FRAGMENTS | [bitcoind prune config](https://github.com/btcpayserver/btcpayserver-docker/blob/master/README.md#generated-docker-compose-) | opt-save-storage-xxs |
+| Customize | BTCPAYGEN_ADDITIONAL_FRAGMENTS | [bitcoind prune config](https://github.com/pauloes-btchubafrica/btcpayserver-docker/blob/master/README.md#generated-docker-compose-) | opt-save-storage-xxs |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | woocommerce | opt-add-woocommerce |
-| Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | Nostr relay | opt-add-nostr-relay |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | shopify | opt-add-shopify |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | lightning database | opt-lnd-autocomplete |
-| Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | tor network | opt-add-tor |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | save memory | opt-save-memory |
 
 | Customize| BTCPAY_DOCKER_REPO | btcpay github repo |https://github.com/btcpayserver/btcpayserver-docker |
@@ -94,6 +84,8 @@ Customze parameters are for experts only and change only when you know what you 
 | Customize| BTCPAYGEN_REVERSEPROXY | reverse proxy |nginx |
 | Customize| ACME_CA_URI | let's encrpt url |https://acme-staging.api.letsencrypt.org/directory |
         
+
+You can find more details about the tooling install in the Virtual Machine in [the tooling section of BTCPayServer-Docker repository](https://github.com/pauloes-btchubafrica/btcpayserver-docker/blob/master/README.md#tooling).
 
 
 ## What the Deployment script does
@@ -166,3 +158,8 @@ Test the install by accessing https://username.btchubafrica.com and signup the 1
 You will see the BTCPay top page.
 
 ![Conglatulation!](images/BTCPay_top.png)
+
+# Videos
+
+Here's a helpful video to show you the work behind this deployment managed by the BTCPay Server dev team:  
+[![BTCPay - Google cloud shell Setup](https://i.ytimg.com/vi/ltKUzFaer2g/hqdefault.jpg)](https://youtu.be/ltKUzFaer2g "BTCPay - Google cloud shell Setup")
