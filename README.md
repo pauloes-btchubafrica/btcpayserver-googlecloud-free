@@ -3,7 +3,8 @@ Host your BTC Pay Server on Google Cloud for free.
 
 # Instructions to deploy BTCPay Server in hosted in Google Cloud.
 
-1. Setup a new account in [Google Cloud](https://console.cloud.google.com). This should be done with a new gmail account, one not associated with any currenct Google Cloud subscription. 2. Create and manager your first [cloud project]([url](https://cloud.google.com/resource-manager/docs/creating-managing-projects)).
+1. Setup a new account in [Google Cloud](https://console.cloud.google.com). This should be done with a new gmail account, one not associated with any currenct Google Cloud subscription.
+2. Create and manager your first [cloud project]([url](https://cloud.google.com/resource-manager/docs/creating-managing-projects)).
 3. [![Login with new account](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/btchubafrica/btcpayserver-google-cloud&page=editor)
 
 ## Overview
