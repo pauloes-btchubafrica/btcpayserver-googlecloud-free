@@ -1,4 +1,4 @@
-# btcpayserver-googlecloud-free
+# btcpayserver-googlecloud-free [NOT COMPLETE]
 Host your BTC Pay Server on Google Cloud for free.
 
 Instructions to deploy BTCPay Server in [production environment](https://github.com/btcpayserver/btcpayserver-docker/tree/master/Production) hosted in Google Cloud.
@@ -50,7 +50,7 @@ The default config is,
 * region is africa-south1
 * zone is africa-south1-a
 * 2 vCPU with 4GiB Memory 
-* boot disksize : 60GB
+* boot disksize : 30GB
 * bitcoin mainnet
 * use lnd
 * temporary Hostname is username.btchubafrica.com (you will change this later)
@@ -70,7 +70,7 @@ Customze parameters are for experts only and change only when you know what you 
 | ------------- | ------------- |------------- | ------------- | 
 | Mandatory| region  | Region to deploy  | africa-south1|
 | Mandatory| zone | Zone to deploy | africa-south1-a |
-| Mandatory| vmtype | [vm type,e2-medium etc or custom-numOfCpu-memInMeg-ext](https://cloud.google.com/compute/docs/machine-types)  | e2-medium |
+| Mandatory| vmtype | [vm type,e2-medium etc or custom-numOfCpu-memInMeg-ext](https://cloud.google.com/compute/docs/machine-types)  | e2-micro |
 | Mandatory| linuxType | The VM's Linux image family from the ubuntu-os-cloud project | ubuntu-2204-lts |
 | Mandatory| diskSizeGb | root disk size in GB | 30 |
 | Mandatory| BTCPAY_HOST  | host name of the btcpay server | username.btchubafrica.com|
@@ -85,7 +85,6 @@ Customze parameters are for experts only and change only when you know what you 
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | woocommerce | opt-add-woocommerce |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | Nostr relay | opt-add-nostr-relay |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | shopify | opt-add-shopify |
-| Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | use more memory | opt-more-memory |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | lightning database | opt-lnd-autocomplete |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | tor network | opt-add-tor |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | save memory | opt-save-memory |
