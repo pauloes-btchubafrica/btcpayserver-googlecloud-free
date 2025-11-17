@@ -79,7 +79,6 @@ Customze parameters are for experts only and change only when you know what you 
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | shopify | opt-add-shopify |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | lightning database | opt-lnd-autocomplete |
 | Customize| BTCPAYGEN_ADDITIONAL_FRAGMENTS | save memory | opt-save-memory |
-
 | Customize| BTCPAY_DOCKER_REPO | btcpay github repo |https://github.com/btcpayserver/btcpayserver-docker |
 | Customize| BTCPAY_DOCKER_REPO_BRANCH | btcpay github repo branch |master |
 | Customize| BTCPAYGEN_REVERSEPROXY | reverse proxy |nginx |
